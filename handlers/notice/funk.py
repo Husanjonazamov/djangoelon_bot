@@ -5,7 +5,7 @@ from asgiref.sync import sync_to_async
 
 client = TelegramClient(env.PHONE_NUMBER, env.API_ID, env.API_HASH)
 
-chat_id = -1002259911997
+chat_id = -1002264446732
 last_sent = False
 last_notice_data = {}
 
