@@ -21,7 +21,6 @@ async def on_startup(dispatcher):
 async def run_client_with_task():
     async with client:
         await client.start()
-        print("Client started...")
 
         await asyncio.gather(
             dynamic_notice_send_task(),
