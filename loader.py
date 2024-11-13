@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 storage = MemoryStorage()
 
 
-bot = Bot(token=BOT_TOKEN, parse_mode='html')
+bot = Bot(token=BOT_TOKEN, parse_mode='markdown')
 
 dp = Dispatcher(bot, storage=storage)
 

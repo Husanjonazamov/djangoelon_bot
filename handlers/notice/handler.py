@@ -8,6 +8,7 @@ from asgiref.sync import sync_to_async
 from asyncio import sleep
 
 
+
 async def dynamic_notice_send_task():
     async with client:
         await client.start()
@@ -22,6 +23,4 @@ async def dynamic_notice_send_task():
                         "interval": notice.interval
                     }
             await sleep(5)
-
-
 
