@@ -2,10 +2,17 @@ version: '3.11'
 
 services:
   bot:
-    build: 
+    build:
       context: .
     volumes:
-      - ./:/code
+      - .:/code
+      - sqlite_data:/code/db  # SQLite faylini saqlash uchun volume
+    environment:
+      - DEBUG=True
+    ports:
+      - "8000:8000"
+    # entrypoint.sh faylini ishga tushurish uchun:
+    entrypoint: ["/entrypoint.sh"]
 
 volumes:
-  sqlite_data: 
+  sqlite_data:
