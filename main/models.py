@@ -17,3 +17,7 @@ class Notice(models.Model):
     interval = models.PositiveIntegerField(help_text="Interval in seconds")  
     
     
+class Elonlarim(models.Model):
+    description = models.TextField()
+    
+    

@@ -21,7 +21,7 @@ chat_ids = [
 
 
 # chat_ids = [
-#     -1002264446732, -1002037632361, -4513123338
+#     -1002264446732,
 # ]
 
 message_counters = {chat_id: 0 for chat_id in chat_ids}
@@ -32,12 +32,16 @@ last_notice_data = {}
 # Xabar yuborish uchun funksiya
 async def send_notice(notice, chat_id):
     try:
+        # Matnni <strong></strong> teglariga o'rab olish
+        formatted_description = f"<strong style='font-wight: 10300;'>{notice.descriptions}</strong>"
+
         # Xabarni yuborish
-        await client.send_message(chat_id, notice.descriptions, parse_mode='html')
+        await client.send_message(chat_id, formatted_description, parse_mode='html')
         last_sents[chat_id] = True  
     except Exception as e:
         print(f"Error sending message to {chat_id}: {e}")
-        last_sents[chat_id] = False 
+        last_sents[chat_id] = False
+
 
 
 @client.on(events.NewMessage())  
