@@ -33,6 +33,7 @@ async def send_notice(notice, chat_id):
     try:
         # Matnni <strong></strong> teglariga o'rab olish
         formatted_description = f"**{notice.descriptions}**"
+        print(formatted_description)
 
         # Xabarni yuborish
         await client.send_message(chat_id, formatted_description, parse_mode='Markdown')
