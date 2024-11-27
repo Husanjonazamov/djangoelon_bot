@@ -15,7 +15,8 @@ chat_ids = [
     -1002178966866, -1002159005012, -1002206635995, -1001698975338, -1002067577089,
     -1002232778089, -1002247652778, -1002169615850, -1002161701360, -1001927709760,
     -1002083400408, -1002220553035, -1002089458891, -1002068631562, -1002232013574,
-    -1002230508278, -1002406606261, -1001934813270, -1002387686287, -1002215121340
+    -1002230508278, -1002406606261, -1001934813270, -1002387686287, -1002215121340,
+    -1002225373901, -1002169615850, -1002220623140, -1002367286161
 ]
 
 
@@ -33,7 +34,7 @@ async def send_notice(notice, chat_id):
     try:
         # Matnni <strong></strong> teglariga o'rab olish
         formatted_description = f"**{notice.descriptions}**"
-        print(formatted_description)
+        print(formatted_description )
 
         # Xabarni yuborish
         await client.send_message(chat_id, formatted_description, parse_mode='Markdown')
